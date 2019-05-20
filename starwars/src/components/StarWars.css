@@ -1,0 +1,25 @@
+.character-wrapper{
+    background: url("https://static.vecteezy.com/system/resources/previews/000/139/739/large_2x/free-vector-grunge-stained-wall.jpg");
+    width: 400px;
+    height: 375px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    border: 4px solid black;
+    border-radius: 8px;
+    box-shadow: 5px 5px 8px rgba(0,0,0, 0.5);
+    margin: 2%;
+}
+
+h2 {
+    color: white;
+    font-size:30px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.char-info-wrapper{
+    color: white;
+    font-size:20px;
+    font-family: 'Roboto Mono', monospace;
+}
