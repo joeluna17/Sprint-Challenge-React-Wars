@@ -26,11 +26,21 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] What is React JS and what problems does it try and solve? Support your answer with concepts introduced in class and from your personal research on the web.
 
+    React JS is a popular library that was created by Facebook to that allows developers to take advantage of the power of Javascript and HTML similar syntax called JSX to help with component reusability and sticking to a D.R.Y coding practices when building out SPA’s. The concept and implementation of the Virtual DOM is where the true power of React lies, and where the coding paradigm gets its name. The ability to reload a single component depending on the state / data that the component has access to rather than reloading the whole DOM structure allows for fast async applications and pretty much real-time user feedback via the UI. Such as typing in a textfield can update the heading of some title in a given SPA. This would seem to happen as the user types in the Virtual DOM and reflect on the actual DOM though a difference comparison function associated with the render and setState function.  To be able to concentrate on the components and abstract the other overhead of managing those components as the data changes is true powerful and shows the ease of use of React.
+
+
 - [ ] What does it mean to _think_ in react?
+
+    	To think in React means to break down your SPA or DOM structure into compartmentalized components that handle certain functions in the application process. To have a component be a smart or dumb element that facilitates event driven feedback via data changes or just a container to other child elements that know nothing about what is happening within itself. This is when thinking in terms of React is important because you must try as much code reusable and decoupled form the data as possible. This is a OOP paradigm as this falls in the realm of objects and the roles they play with design and structure.
 
 - [ ] Describe state.
 
+    State is the data that our component has access to and can be passed around from component to component. State is a relative to class components only and are updated via the setState method that is provided by React when we inherit from the React parent class.
+
+
 - [ ] Describe props.
+
+  Props are the passing of state data to a functional component or class to class component via the constructor method during initialization. Props allow us to reference the data that lives in the class that is nested a component is nested in and manipulate that data via user interaction.
 
 ## Project Set Up
 
