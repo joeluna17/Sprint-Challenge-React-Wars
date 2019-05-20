@@ -1,18 +1,31 @@
 import React, { Component } from 'react';
 import CharacterComponent from "./components/CharacterComponent"
+import PageButton from "./components/PageButton"
 import './App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      starwarsChars: []
+      starwarsChars: [],
+      next:"",
+      previous:""
     };
   }
 
   componentDidMount() {
     this.getCharacters('https://swapi.co/api/people/');
   }
+
+  nextPage = e => {
+      e.preventDefault()
+      this.getCharacters (this.state.next)
+  }
+
+  previousPage = e => {
+    e.preventDefault()
+    this.getCharacters (this.state.previous)
+}
 
   getCharacters = URL => {
     // feel free to research what this code is doing.
@@ -23,15 +36,23 @@ class App extends Component {
         return res.json();
       })
       .then(data => {
-        this.setState({ starwarsChars: data.results });
+          this.setState({ 
+                          starwarsChars: data.results,
+                          next: data.next,
+                          previous: data.previous
+         });
+        
+
       })
       .catch(err => {
         throw new Error(err);
       });
   };
 
+
+
   render() {
-      console.log(this.state.starwarsChars)
+  
     return (
       <div className="App">
         <h1 className="Header">React Wars</h1>
@@ -39,6 +60,8 @@ class App extends Component {
           this.state.starwarsChars.map(char => {
             return <CharacterComponent char = {char} key = {char.name}  />
           })}
+          <PageButton segue={this.nextPage} classname = "right" textLabel=">" />
+          <PageButton segue={this.previousPage} classname = "left" textLabel="<" />
       </div>
     );
   }
