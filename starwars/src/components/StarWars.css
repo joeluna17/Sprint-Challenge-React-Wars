@@ -1,0 +1,63 @@
+.character-wrapper{
+    background: url("https://www.onlygfx.com/wp-content/uploads/2016/11/grunge-overlay-5.png");
+    background-position: center;
+    background-size: cover;
+    width: 40%;
+    height: 375px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 5px 5px 8px rgba(0,0,0,0.7);
+    margin: 2% auto;
+    
+}
+
+h2 {
+    color: greenyellow;
+    font-size:30px;
+    font-family: 'Roboto Mono', monospace;
+    text-shadow: 5px 8px 12px rgba(0,0,0,0.9);
+}
+
+.char-info-wrapper{
+    color: purple;
+    font-size: 22px;
+    font-weight: 800;
+    font-family: 'Roboto Mono', monospace;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px white, 0 0 40px white, 0 0 50px white, 0 0 60px #e60073, 0 0 70px #e60073;
+}
+
+.left{
+    position:fixed;
+    left:0px;
+    top: 50vh;
+    width:35px;
+    height:200px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    color:white;
+    border:none;
+
+}
+
+.right{
+    position:fixed;
+    right:0px;
+    top: 50vh;
+    width:35px;
+    height:200px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    color:white;
+    border:none;
+    
+}
